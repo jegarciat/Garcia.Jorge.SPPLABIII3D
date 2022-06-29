@@ -1,0 +1,64 @@
+{
+  "anuncios": [
+    {
+      "id": 1,
+      "titulo": "Corsa",
+      "transaccion": "alquiler",
+      "descripcion": "Corsa 2007",
+      "precio": 25000,
+      "num_puertas": "4",
+      "num_kms": "40000",
+      "potencia": "80"
+    },
+    {
+      "id": 2,
+      "titulo": "Peugeot",
+      "transaccion": "venta",
+      "descripcion": "Peugeot 2017",
+      "precio": 540800,
+      "num_puertas": "4",
+      "num_kms": "5000",
+      "potencia": "120"
+    },
+    {
+      "id": 3,
+      "titulo": "Ford",
+      "transaccion": "venta",
+      "descripcion": "Ford 2022",
+      "precio": 1000000,
+      "num_puertas": "5",
+      "num_kms": "0",
+      "potencia": "180"
+    },
+    {
+      "id": 4,
+      "titulo": "Fiat",
+      "transaccion": "alquiler",
+      "descripcion": "Fiat 2019",
+      "precio": 25000,
+      "num_puertas": 2,
+      "num_kms": "32000",
+      "potencia": 108
+    },
+    {
+      "id": 6,
+      "titulo": "Test Dos",
+      "transaccion": "venta",
+      "descripcion": "Tes Dos 2022",
+      "precio": 1230000,
+      "num_puertas": 5,
+      "num_kms": "0",
+      "potencia": 188
+    },
+    {
+      "id": 7,
+      "titulo": "Test Uno",
+      "transaccion": "alquiler",
+      "descripcion": "Test Uno 2018",
+      "precio": 455000,
+      "num_puertas": 14,
+      "num_kms": "12000",
+      "potencia": 120
+    }
+  ]
+}

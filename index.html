@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/estilos.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
+  <script src="./js/script.js" type="module"></script>
+  <title>García SP Laboratorio III</title>
+</head>
+
+<body>
+  <header>
+    <img class="header-logo" src="./images/logo.png" alt="logo-autos" />
+    <nav>
+      <ul class="nav-items p-2">
+        <li><a href="anuncios.html">Nosotros</a></li>
+        <li><a href="index.html">Administración</a></li>
+        <li><a href="anuncios.html">Anuncios</a></li>
+        <li><a href="anuncios.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="main-encabezado">
+      <h2 class="display-2 m-2">Administración</h2>
+      <img src="./images/autos.png" id="imagenPrincipal" class="imagen-encabezado" />
+    </div>
+
+    <form action="" class="centrar m-3">
+      <fieldset>
+        <legend>Informacion del Anuncio</legend>
+        <h3 class="m-3">TITULO:</h3>
+        <input type="text" name="titulo" placeholder="Titulo" id="txtTitulo" required />
+
+        <h3 class="m-3">TRANSACCION:</h3>
+        <div id="radioInput">
+          <label for="venta">VENTA</label>
+          <input type="radio" name="transaccion" value="venta" id="venta" checked />
+          <label for="alquiler">ALQUILER</label>
+          <input type="radio" name="transaccion" value="alquiler" id="alquiler" />
+        </div>
+
+        <h3 class="m-3">DESCRIPCION:</h3>
+        <input type="text" name="descripcion" placeholder="Descripcion" id="txtDescripcion" required />
+
+        <h3 class="m-3">PRECIO:</h3>
+        <input type="number" name="precio" placeholder="Precio" id="txtPrecio" step="0.1" min="1" required />
+
+        <div class="contenedor-camposChicos m-3">
+          <div class="centrarCampo p-2">
+            <img src="./images/puertas.png" alt="Imagen de Puertas">
+            <input type="number" name="puertas" placeholder="Puertas" id="txtPuertas" min="1" required />
+          </div>
+          <div class="centrarCampo p-2">
+            <img src="./images/kilometros.png" alt="Imagen de Kilometros">
+            <input type="number" name="kms" placeholder="Kms" id="txtKms" min="0" required />
+          </div>
+          <div class="centrarCampo p-2">
+            <img src="./images/potencia.png" alt="Imagen de Potencia">
+            <input type="number" name="potencia" placeholder="Potencia" id="txtPotencia" min="1" required />
+          </div>
+        </div>
+      </fieldset>
+
+      <div class="contenedor-camposChicos col p-1">
+        <button type="submit" class="boton centrarCampo m-2" id="btnGuardar">
+          <img src="./images/guardar.png" alt="Imagen de Guardar">
+          Guardar
+        </button>
+        <button type="submit" class="boton centrarCampo ocultar m-2" id="btnModificar">
+          <img src="./images/editar.png" alt="Imagen de Guardar">
+          Modificar
+        </button>
+        <button type="button" class="boton centrarCampo ocultar m-2" id="btnEliminar">
+          <img src="./images/eliminar.png" alt="Imagen de Guardar">
+          Eliminar
+        </button>
+        <button type="reset" class="boton centrarCampo m-2" id="btnCancelar">
+          <img src="./images/cancel.png" alt="Imagen de Guardar" id="btnCancelar">
+          Cancelar
+        </button>
+        <input type="hidden" name="anuncioID" value="" />
+      </div>
+    </form>
+
+    <section class="container mt-3 p-1">
+      <div class="row justify-content-center">
+        <div class="col-md-7">
+          <h4 class="text-center">FILTROS</h3>
+            <div class="form-row">
+              <div>
+                <label for="filtrar"> Filtrar por:</label>
+                <select name="filtrar" id="filtro" class="form-control">
+                  <option name="filtrar" value="Todos" selected>Todos</option>
+                  <option name="filtrar" value="alquiler">Alquiler</option>
+                  <option name="filtrar" value="venta">Venta</option>
+                </select>
+              </div>
+              <div class="m-2">
+                <label for="promedio">Promedio</label>
+                <input type="text" name="txtPromedio" id="promedio" class="form-control" placeholder="N/A" disabled>
+              </div>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container mt-2">
+      <div class="row justify-content-center ">
+        <div class="col-md-7">
+          <h2>Seleccione los filtros</h2>
+            <div class="container">
+              <div class="row custom-control custom-checkbox" id="contenedor-checkboxs">
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="cbox" id="cboxtitulo" value="titulo" name="titulo" checked>
+                  <label class="custom-control-label" for="cboxtitulo">Titulo</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="cbox" id="cboxtransaccion" value="transaccion" name="transaccion"
+                    checked>
+                  <label class="custom-control-label" for="cboxtransaccion">Transaccion</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="cbox" id="cboxdescripcion" value="descripcion" name="descripcion"
+                    checked>
+                  <label class="custom-control-label" for="cboxdescripcion">Descripcion</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="cbox" id="cboxprecio" value="precio" name="precio" checked>
+                  <label class="custom-control-label" for="cboxprecio">Precio</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="cbox" id="cboxpuertas" value="puertas" name="puertas" checked>
+                  <label class="custom-control-label" for="cboxpuertas">Puertas</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="cbox" id="cboxkm" value="km" name="km" checked>
+                  <label class="custom-control-label" for="cboxkm">Kilometros</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="cbox" id="cboxpotencia" value="potencia" name="potencia" checked>
+                  <label class="custom-control-label" for="cboxpotencia">Potencia</label>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="contenedor-spinner" class="centrar"></div>
+    <div class="container-fluid">
+      <section id="contenedor-tabla" class="centrar">
+        <div id="tabla_anuncios"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <nav>
+      <ul class="nav-items">
+        <li><a href="anuncios.html">Nosotros</a></li>
+        <li><a href="index.html">Administración</a></li>
+        <li><a href="anuncios.html">Anuncios</a></li>
+        <li><a href="anuncios.html">Contacto</a></li>
+      </ul>
+    </nav>
+    <p>Todos los derechos reservados <date>2022</date>&copy;</p>
+  </footer>
+
+</body>
+
+</html>

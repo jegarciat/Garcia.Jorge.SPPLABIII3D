@@ -1,0 +1,214 @@
+body{
+    align-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    background-color: rgb(4, 46, 160);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+    padding: 20px;
+}
+
+.header-logo{
+    width: 150px;
+    height: 110px;
+}
+
+.nav-items{
+    display: flex;
+    font-size: 20px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.nav-items li{
+    margin: 0px 10px 0px 10px;
+}
+
+.nav-items li a{
+    color: white;
+    text-decoration: none;
+    margin-right: 5px;
+}
+
+.nav-items li a:hover{
+    padding: 10px;
+    border-radius: 12px;
+    background-color: aliceblue;
+    color: black;
+}
+
+.main-encabezado{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.imagen-encabezado{
+    height: 300px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.centrar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form fieldset{
+    display: flex;
+    flex-direction: column;
+}
+
+#radioInput{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#radioInput input {
+    margin: 0px 50px 0px 10px;
+}
+
+.contenedor-camposChicos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.contenedor-camposChicos img{
+    height: 30px;
+    margin: 8px;
+}
+
+.centrarCampo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.boton{
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(125, 148, 211);
+    color: black;
+    font-weight: bolder;
+    height: 40px;
+    width: 130px;
+}
+
+.boton:hover{
+    background-color: rgb(56, 97, 209);
+    cursor: pointer;
+    color:  aliceblue;
+}
+
+.boton img{
+    height: 22px;
+    margin: 8px;
+}
+
+#contenedor-tabla{
+    margin: 10px auto;
+}
+
+table, th, td{
+    border: 3px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 10px;
+}
+
+thead{
+    background-color: rgb(0, 68, 255);
+}
+
+tbody tr:hover{
+    background-color: rgb(56, 85, 165);
+    color:  aliceblue;
+    cursor: pointer;
+}
+
+.impar{
+    background-color: rgb(60, 165, 168);
+}
+
+.par{
+    background-color: rgb(22, 127, 131);
+}
+
+#contenedor-spinner img{
+    margin: 5px;
+    padding-right: 30px;
+    height: 130px;
+}
+
+footer{
+    background-color: rgb(4, 46, 160);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 20px;
+    color: white;
+}
+
+input, button{
+    background-color: rgb(214, 213, 213);
+    border-radius: 5px;
+    margin: 10px 10px 10px 0px;
+    height: 30px;
+}
+
+.ocultar{
+    display: none;
+}
+
+
+@media screen and (max-width: 800px) {
+    header{
+        flex-direction: column;
+        height: 270px;
+        align-items: center;
+    }
+
+    .header-logo{
+        width: 110px;
+        height: 90px;
+    }
+
+    .nav-items{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 10px 0px 10px;
+    }
+
+    .nav-items li{
+        margin: 10px 0px 10px 0px;
+    }
+
+    #imagenPrincipal{
+        display: none;
+    }
+
+    .contenedor-camposChicos{
+        flex-direction: column;
+    }
+
+    footer{
+        flex-direction: column;
+        height: 250px;
+    }
+}
